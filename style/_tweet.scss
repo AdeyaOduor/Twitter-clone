@@ -1,0 +1,267 @@
+.tweet {
+	width: 100%;
+	border-bottom: $siteborder;
+	box-sizing: border-box;
+	position: relative;
+	animation: $lightanimation;
+}
+
+.tweet-link {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+.tweet-inside {
+	display: flex;
+	width: 100%;
+	transition: $lighttransition;
+	align-items: flex-start;
+}
+
+.tweet:hover {
+	background-color: lighten($sitegrey, 50%);
+}
+
+.profile-image {
+	object-fit: cover;
+	width: 3rem;
+	height: 3rem;
+	border-radius: 50%;
+	margin-right: 0.5rem;
+	z-index: 2;
+}
+
+.small-profile-image {
+	width: 2rem;
+	max-width: 2rem;
+	height: 2rem;
+}
+
+.tweet-main {
+	width: 100%;
+}
+
+.tweet-top-data {
+	margin-bottom: 0.25rem;
+	width: 100%;
+	display: flex;
+	align-items: center;
+}
+
+.tweet-svg-holder {
+	width: 1.75rem;
+	height: 1.75rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+	transition: $lighttransition;
+}
+
+.tweet-svg-holder:hover {
+	background-color: lighten($sitecolor, 35%);
+}
+
+.reply-div > .tweet-svg-holder:hover {
+	background-color: lighten($sitecolor, 35%);
+}
+
+.retweet-div > .tweet-svg-holder:hover {
+	background-color: lighten(blue, 40%);
+}
+
+.like-div > .tweet-svg-holder:hover {
+	background-color: lighten(red, 40%);
+}
+
+.copy-div > .tweet-svg-holder:hover {
+	background-color: (lighten($sitecolor, 35%));
+}
+
+.tweet-icon {
+	width: 1.25rem;
+	fill: grey;
+}
+
+.tweeter-name {
+	font-weight: bold;
+	margin-right: 0.25rem;
+	color: black;
+	padding-bottom: 0.25rem;
+}
+
+.tweeter-at {
+	color: grey;
+	margin-right: 0.25rem;
+}
+
+.tweet-text {
+	color: black;
+	margin-bottom: 1rem;
+	padding-right: 1rem;
+	box-sizing: border-box;
+	overflow-wrap: break-word;
+	word-break: break-all;
+	line-height: 1.3125;
+	font-size: 15px;
+}
+
+.tweet-responses {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.tweet-svg-div {
+	display: flex;
+	align-items: center;
+	width: 2.5rem;
+	justify-content: space-between;
+}
+
+// svg styling
+.tweet-svg-div svg {
+	transition: $lighttransition;
+}
+
+.reply-div svg:hover {
+	fill: $sitecolor;
+}
+.retweet-div svg:hover {
+	fill: blue;
+}
+
+.like-div svg:hover {
+	fill: red;
+}
+
+.copy-div svg:hover {
+	fill: $sitecolor;
+}
+
+// "active" responses
+
+.liked {
+	color: red;
+	fill: red;
+}
+
+.active-retweet svg {
+	color: blue;
+	fill: blue;
+}
+
+.retweeted-by {
+	padding-top: 0.3rem;
+	padding-left: 1.2rem;
+	font-weight: bold;
+	font-size: $smallfont;
+	color: rgb(101, 119, 134);
+	padding-bottom: 0.5rem;
+	text-decoration: none;
+	display: flex;
+	align-items: center;
+	transition: $lighttransition;
+}
+
+.big-retweeted-by {
+	padding-bottom: 0.2rem;
+	padding-left: 2rem;
+}
+
+.retweeted-by > * {
+	margin-right: 1rem;
+}
+
+.reply-tweet::before {
+	position: absolute;
+	top: 0;
+	left: 2.25rem;
+	content: "";
+	width: 1.5px;
+	height: 50%;
+	background-color: lighten($sitegrey, 30%);
+	z-index: -1;
+}
+
+.thread-tweet::before {
+	position: absolute;
+	top: 2.25rem;
+	left: 2.25rem;
+	content: "";
+	width: 1.5px;
+	height: 100%;
+	background-color: lighten($sitegrey, 30%);
+	z-index: -1;
+}
+
+.big:hover {
+	background-color: white;
+}
+
+.big-tweet-responses {
+	border-top: $siteborder;
+	height: 3rem;
+	justify-content: space-around;
+}
+
+
+
+.big-tweet-text {
+	font-size: $bigfont;
+	padding-left: 0.75rem;
+}
+
+.big-tweet-data {
+	display: flex;
+	align-items: center;
+	padding-left: 1rem;
+	gap: 1.5rem;
+	border-top: $siteborder;
+	height: 3.5rem;
+}
+
+.big-tweet-data > * {
+	margin-right: 1rem;
+}
+
+.hover-under {
+	text-decoration: none;
+}
+
+.hover-under:hover {
+	text-decoration: underline;
+}
+
+.tweet-dropdown {
+	border: $siteborder;
+	padding: 0.5rem;
+	position: absolute;
+	top: 0;
+	right: 0;
+	background-color: white;
+	width: 11rem;
+	transition: $lighttransition;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	column-gap: 0.5rem;
+	box-shadow: rgba(101, 119, 134, 0.2) 0px 0px 15px, rgba(101, 119, 134, 0.15) 0px 0px 3px 1px;
+}
+
+.tweet-dropdown:hover {
+	background-color: lighten($sitegrey, 50%);
+}
+
+.begotten-link {
+	color: $sitecolor;
+}
+
+.replying-to {
+	padding: 0 0.75rem 0.5rem;
+}
+
+.original {
+	border-bottom: 0;
+}

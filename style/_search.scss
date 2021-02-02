@@ -1,0 +1,38 @@
+.search-form {
+	width: 100%;
+	margin-right: 1rem;
+}
+
+.search-label {
+	position: relative;
+}
+
+.search-input {
+	background-color: rgb(230, 236, 240);
+	border: 1px solid transparent;
+	border-radius: 100px;
+	outline: none;
+	height: 2rem;
+    text-indent: 3rem;
+	width: 100%;
+	font-size: 15px;
+}
+
+.search-input:focus {
+	background-color: white;
+	border: 1px solid $sitecolor;
+}
+
+.search-icon {
+	fill: grey;
+	width: 1.2rem;
+	position: absolute;
+	margin-top: auto;
+	margin-bottom: auto;
+	top: 0px;
+	left: 1rem;
+}
+
+.search-icon:hover {
+	fill: $sitecolor;
+}
